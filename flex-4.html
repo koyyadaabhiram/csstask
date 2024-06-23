@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+    <style>
+
+        *{
+            padding:0px;
+            margin:0px;
+        }
+
+        .menu{
+             display: flex;
+             flex-direction: row;
+             justify-content:space-around;   
+             column-gap:600px;
+             padding-top:20px;
+             padding-bottom:20px;
+
+        }
+
+        .menu img{
+            width:100px;
+            height:30px;
+        }
+
+        .menu .menu-right ul{
+            display:flex;
+            gap:16px;
+           padding-top:8px;
+        }
+
+        ul li
+        {color:#e68bbe;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+        }
+
+        ul{
+            list-style-type:none;
+        }
+
+        .container-1{
+            width:100%;
+            height:68vh;
+            position: relative;
+        }
+
+        .container-1 .child-1{
+            position:absolute;
+            top:100px;
+            left:35%;
+            line-height:50px;
+        }
+
+        .child-1 .a{
+            color:#fe4e00;
+            font-weight:bolder;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
+        }
+        .child-1 .b{
+           color:whitesmoke;
+           /* font-weight:bold; */
+           font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-size:16px;
+           margin-left:20px;
+
+               } 
+
+        .child-1 .c{
+
+            color:red;
+            margin-left:160px;
+            font-size:15px;
+            padding-top:8px;
+            padding-bottom:8px;
+            padding-left:15px;
+            padding-right:15px;
+            border-radius:7px;
+            border:1px solid white;
+            background-color:#D4D4D4;
+            opacity: 0.8;
+            margin-top:15px;
+        }
+
+        .container-2{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            gap:30px;
+            margin-top:12vh;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+            color:#fe4e00;
+            font-size:15px;
+        }
+
+       .container-2-a{
+        display:flex;
+        justify-content:space-around;
+        margin-top:40px;
+       }
+
+       .container-2-a div{
+        /* display:flex; */
+        /* flex-direction: column;
+        align-items: center; */
+        width:400px;
+        height:20vh;
+        margin-bottom:30px;
+        border-radius:10px;
+        background-color:#7effd4;
+        padding-top:10px;
+        
+
+       }
+
+       .container-2-a .test{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+       }
+
+       .test p{
+        font-size:10px;
+     
+        padding:5px;
+
+       }
+
+       .container-2-a img{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+       }
+
+       .test .star{
+        color:#ffd700;
+        text-align: center;
+        font-size:7px;
+       }
+
+       .container-3{
+        width:100%;
+        height:580px;
+        position: relative;
+        opacity:0.9;
+       }
+
+       .container-3-child{
+        width:30%;
+        height:480px;
+        /* border:1px solid red;  */
+        position:absolute;
+        left:35%;
+        top:9%;
+        background-color:#2E8B57;
+       }
+
+       .login{
+        position:absolute;
+        left:40%;
+        top:10%;
+        color:whitesmoke;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       }
+
+       .container-3-child .a{
+        position: absolute;
+        width:75%;
+        height:20px;
+        border:1px solid whitesmoke;
+        top:22%;
+        left:10%;
+        border-radius:25px;
+        opacity:0.7;
+        text-align: center;
+        padding-top:8px;
+        padding-bottom:8px;
+        color:whitesmoke;
+        font-weight:bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+       }
+
+       .container-3-child .b{
+        position: absolute;
+        width:75%;
+        height:20px;
+        border:1px solid whitesmoke;
+        top:33%;
+        left:10%;
+        border-radius:25px;
+        opacity:0.7;
+        text-align: center;
+        padding-top:8px;
+        padding-bottom:8px;
+        color:whitesmoke;
+        font-weight:bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+
+       .container-3-child .c{
+        position: absolute;
+        width:75%;
+        height:20px;
+        border:1px solid whitesmoke;
+        top:50%;
+        left:10%;
+        border-radius:25px;
+        opacity:0.7;
+        text-align: center;
+        padding-top:8px;
+        padding-bottom:8px;
+        color:rgb(238, 157, 6);
+        font-weight:bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+       }
+
+       .container-3-child .d{
+        position: absolute;
+        width:75%;
+        height:20px;
+        border:1px solid whitesmoke;
+        top:62%;
+        left:10%;
+        border-radius:25px;
+        opacity:0.7;
+        text-align: center;
+        padding-top:8px;
+        padding-bottom:8px;
+        color:rgb(238, 157, 6);
+        font-weight:bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+       }
+
+       .container-4{
+        margin-top:40px;
+        width:100%;
+        height:480px;
+        /* border:1px solid red;           */
+        background-color:#f0f2f5;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        padding-top:140px;
+       }
+
+       .container-4 .facebook h1{
+        margin-bottom:10px;
+        color:#1877f2;
+        font-size:46px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       }
+
+       .container-4 .facebook p{
+        margin-bottom:10px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       }
+
+       .facebooklogin .facechild{
+        width:260px;
+        height:40vh;
+        border:1px solid white;
+        background-color:white;
+        border-radius:5px;
+        margin-bottom:10px;
+
+       }
+
+       .facebooklogin .facechild div{
+
+               display: flex;
+               flex-direction: column;
+               margin-left:8px;
+               margin-bottom:10px;
+               width:73%;
+               height:4vh;
+               border:1px solid grey;
+               border-radius:7px;
+                }
+
+        .facechild .facechild-a{
+            color:rgb(184, 181, 181);
+            font-weight: bold;
+            padding-top:8px;
+            font-size:12px;
+            padding-left:20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .facechild .facechild-b{
+            color:rgb(184, 181, 181);
+            font-weight: bold;
+            padding-top:8px;
+            font-size:12px;
+            padding-left:20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+
+        .facechild .facechild-c{
+            color:white;
+            font-weight: bold;
+            background-color: #1877f2;
+            padding-top:8px;
+            font-size:15px;
+            padding-left:18px;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .facechild .facechild-d{
+            color:#1877f2;
+            font-size:12px;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .newhr{
+            margin:10px;
+            border-color:rgb(233, 229, 229);
+            margin-bottom:20px;
+
+        }
+
+       .facechild-e{
+            width: 140px;
+            height:24px;
+            /* border:1px solid red; */
+            border-radius:7px;
+            color:rgb(243, 238, 238);
+            font-weight: bolder;
+            background-color:#42b72a;
+            padding-top:8px;
+            font-size:12px;
+            /* padding-left:18px; */
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-left:50px;
+        }
+
+        .container-5{
+            display:flex;
+            justify-content: center;
+        }
+
+        .container-5 .twitter , .twittersignup{
+            margin-top:80px;
+            margin-bottom:80px;
+            width:500px;
+            height:400px;
+        }
+
+        .container-5 .twittersignup{
+            padding-left:20px;
+            padding-top:20px;
+            display:flex;
+            flex-direction:column;
+            align-items:start;
+            gap:10px; 
+        }
+
+        .twittersignup .fa-twitter{
+            color:#2094f8;
+            font-size:30px;   
+        }
+
+        .twittersignup h1{
+            color:black;
+            font-size:45px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .twittersignup h2{
+            font-size:20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .twittersignup .google{
+            width:130px;
+            height:30px;
+            border:1px solid rgb(201, 200, 200);
+            border-radius:12px;
+            font-size:10px;
+            padding-top:10px;
+            padding-left:25px; 
+            
+        }
+
+        .twittersignup .email{
+            width:130px;
+            height:30px;
+            border:1px solid rgb(201, 200, 200);
+            border-radius:12px;
+            font-size:10px;
+            padding-top:10px;
+            padding-left:25px; 
+            background-color:#1e9bec;
+            
+        }
+
+        .twittersignup .policy{
+            font-size:9px;   
+        }
+
+
+        .twittersignup .googlein{
+            width:100px;
+            height:30px;
+            border:1px solid rgb(201, 200, 200);
+            border-radius:12px;
+            font-size:12px;
+            padding-top:4px;
+            padding-left:55px; 
+            color:#1e9bec;
+            font-weight:bold;
+            
+        }
+
+        .container-6{
+            width:100%;
+            height:500px;
+            border:1px solid white;
+            background-color:#eaeaea;
+        }
+
+        .container-6 .telegram{
+            width:80%;
+            height:400px;
+            border:1px solid rgb(201, 199, 199);
+            margin:0px auto;
+            border-radius:5px;
+            margin-top:50px;
+        }
+
+        .telegram{
+            display:flex;
+        }
+
+        .telegram .telechild{
+            width:50%;
+            height:400px;
+            /* border:1px solid red; */
+        }
+
+        .telegram img{
+           width:100%;
+           height:400px;
+        } 
+
+        .telelogin{
+            
+                 display:flex;
+                 flex-direction: column;
+                 align-items: center;
+                 justify-content:center;
+                 gap:20px; 
+        }
+
+        .telelogin .signin{
+            color:rgb(97, 95, 95);
+            font-size:15px;
+            font-weight: bold;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .telelogin .username{
+            width:200px;
+            height:25px;
+            border:1px solid rgb(172, 170, 170);
+            border-radius:5px;
+            padding-left:8px;
+            padding-top:10px;
+            font-size:13px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            opacity:0.4;
+            } 
+
+            .telelogin .next{
+            width:200px;
+            height:25px;
+            border:1px solid rgb(172, 170, 170);
+            border-radius:5px;
+            background-color:#171d73;
+            padding-left:10px;
+            padding-top:10px;
+            font-size:13px;
+            color:white;
+            font-weight:bold;
+            text-align:center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            } 
+
+        .container-7{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top:60px;
+        }
+
+        .container-7 h1{
+            font-size:35px;
+            color:#dd8035;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .container-7 img{
+            width:130px;
+            height:100px;
+            border:1px solid #dd8035;
+            border-radius:50%;
+            padding:7px;
+            margin-top:30px;
+
+        }
+
+        .container-7 .review{
+            margin-top:30px;
+            font-size:22px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color:#726f6f;   
+        }
+
+        .container-7 h4{
+            color:#dd8035;
+            margin-top:40px;
+            font-size:25px;
+        }
+
+        .container-7 .vectorid{
+            color:rgb(134, 131, 131);
+            font-weight: bold;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-top:10px;
+            margin-bottom:20px;
+        }
+
+        .course{
+            width:100%;
+            margin:30px auto;
+            height:auto;
+            background-color:rgb(236, 233, 233);
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            gap:25px;
+            justify-content:space-around;
+            padding-top:20px;
+            padding-bottom:20px;
+
+        }
+
+        .course .java,.Data,.C-lang,.tally,.android,.html{
+            width:550px;
+            height:150px;
+            border:1px solid rgb(224, 223, 223);
+            border-radius:7px;
+            background-color: white;
+            padding-top:20px;
+            line-height:1.7;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            
+        }
+
+        .java .pr{
+            color:rgb(167, 164, 164);
+            font-size:10px;
+            font-weight:bolder;
+            margin-left:20px;
+        }
+
+        .java .core{
+            color:#e0467c;
+            font-weight: bolder;
+            font-size:18px;
+            font-family: "Roboto Mono", monospace;
+            margin-left:20px;
+
+
+
+        }
+
+        .javachild{
+            display: flex;
+            column-gap:20px;
+            margin-left:20px;
+        }
+
+        .javachild .lessthan{
+        padding-left: 5px; 
+        padding-top:17px;
+         color: rgb(167, 163, 163);
+        }
+
+        .javachild .lesspro{
+        padding-top:17px;color: rgb(167, 163, 163);font-weight: bold; font-size:15px
+
+        }
+
+        .javachild .st{
+        
+            margin-left:160px;
+            border:1px solid  #e0467c;;
+            border-radius:16px;
+            padding-left:25px;
+            padding-right:20px;
+            padding-top:4px; 
+            font-size:15px;
+            margin-top:10px;
+            color: #e0467c;
+            padding-left:15px;
+        
+        }
+
+        .footerwrapper{
+            width:100%;
+            height:400px;
+            position: relative;
+        }
+
+        .footer{
+
+            width:100%;
+            height:400px;
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            gap:15px;
+            position: absolute;
+            top:0px;
+        }
+
+        .footer .ban,.hyd,.com,.che{
+            margin-top:40px;
+            width:240px;
+            height:200px;
+
+        }
+
+        .ban{
+            display:flex;
+            flex-direction: column;
+            color:white;
+            font-family: "Roboto Mono", monospace;
+            color:rgb(236, 231, 231)
+
+        }
+
+        .ban i{
+            line-height:43px;
+            color:#dd8035
+        }
+
+        .ban p{
+            color:rgb(182, 177, 177);
+            font-size:12px;
+
+            
+        }
+
+        .contact{
+            display: flex;
+            column-gap:40px;
+            color:rgb(182, 177, 177);
+
+        }
+
+        .contact span{
+            font-size:13px;
+            margin-left:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="menu">
+        <div><img src="flex4logo.png"></div>
+        
+        <div class="menu-right">
+            <ul>
+               <li> Home</li>
+               <li>About</li>
+               <li>Course</li>
+               <li>Register</li>
+               <li> Contact
+            </li>
+            </ul>
+        </div>
+        
+    </nav>
+   
+ <div class="container-1">
+    <img src="autosar.jpg" style="width:100%; opacity:0.8; height:68vh; ">
+
+    <div class="child-1"> 
+
+        <h1 class="a">india's NO.1 training institute</h1>
+        <p class="b">To become a full-stack devloper now you can join with us</p>
+       <button class="c">Click me to join</button>
+    </div>
+ </div>  
+ 
+ <div class="container-2">
+
+    <div><h1>Testimonials</h1></div>
+
+  </div>
+
+ <div class="container-2-a">
+
+    <div  class="test">
+        <img src="aishwarya-1.jpg" alt="noimage">
+        <p>
+            In my experience all the teachers are very supportive and 
+            friendly and the placement process has been very smooth throughout. 
+            I would always be very grateful for the lifelong connections I made</p>
+        <h3 style="font-size:10px;">Payal</h3>
+        <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+        </div>
+    </div>
+
+    <div  class="test">
+        <img src="pavas-jain.jpg" alt="noimage">
+        <p>
+            In my experience all the teachers are very supportive and 
+            friendly and the placement process has been very smooth throughout. 
+            I would always be very grateful for the lifelong connections I made</p>
+        <h3 style="font-size:10px;">Ravi</h3>
+        <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+        </div>
+    </div>
+    
+ </div>
+
+
+ <div class="container-3" style="background-color: #90ca75;">
+    <div class="container-3-child">
+        <div class="login"> <h2>Login</h2></div>
+            <div class="a">User id</div>
+            <div class="b">Password</div>
+            <div class="c">Login</div>
+            <div class="d">I am New</div>
+
+    </div>
+
+ </div>
+
+ <div class="container-4">
+
+    <div class="facebook" style="margin-top: 50px;">
+        <h1>facebook</h1>
+        <p>Facebook helps you connect and share <br>with the people in your life</p>
+    </div>
+    <div class="facebooklogin">
+        <div class="facechild">
+            <div class="facechild-a" style="margin-top:15px;">Email address or phone number</div>
+            <div class="facechild-b">Password</div>
+            <div class="facechild-c">Log in</div>
+            <p class="facechild-d">Forgotten password ?</p>
+            <hr class="newhr">
+            <p class="facechild-e">Create New Account</p>
+        </div>
+        <p style="font-size: 12px; margin-left:18px;"><strong>Create a Page </strong>for a celebrity, brand or business</p>
+
+    </div>
+ </div>
+
+ <div class="container-5">
+    <div class="twitter">
+        <img src="twi.jpg" width="500px" height="460px" alt="imagenotfound" >
+
+    </div>
+    
+    <div class="twittersignup">
+        <div><i class="fa-brands fa-twitter" ></i></div>
+        <h1>Happening now</h1>
+        <h2 style="margin-top:10px;">Join Twitter  today. </h2>
+
+        <div class="google"><i class="fa-brands fa-google"></i><span style="padding:5px">Signup with google</span></div>
+
+        <div class="google"><i class="fa-brands fa-apple"></i><span style="padding:5px"> <b>Signup with apple</b></span></div>
+         <div style="margin-left:70px;">or</div>
+        <div class="email"> signup with phone or email</div>
+        <div class="policy">By signing up you agree the Terms of Service and Privacy<br> Policy including Cookies Use</div>
+         
+        <div>
+            <h3 style="font-size:13px; margin-top:10px;">Already have an account ?</h3>
+    
+        </div>
+        <div class="googlein">Sign in</div>
+    </div>
+    
+ </div>
+
+ <div class="container-6">
+    <div class="telegram">
+        <div class="telechild"><img src="asc.jfif"></div>
+
+        <div class="telechild telelogin">
+            <h2 class="signin">Sign In</h2>
+            <div class="username">Username</div>
+            <div class="next">Next</div>
+            
+        </div>
+        
+    </div>
+ </div>
+
+ <div class="container-7">  
+    <h1>Testimonilas</h1>
+    <img src="pavas-jain.jpg">
+    <p class="review">In my experience all the teachers are very supportive and friendly <br>
+        and the placement process has been very smooth throughout. I would always be very <br>
+        grateful for the lifelong connections I made
+
+    </p>
+    <h4>Payal</h4>
+    <pre class="vectorid">V23HFS5-R2 | Samsung | 10 LPA</pre>
+    
+ </div>
+
+ <div class="course">
+
+    <div class="java"> 
+        <div class="pr">PROGRAMMING</div>
+        <div class="core">Core Java</div>
+        <hr style="margin-top:30px; opacity: 0.3;" >
+        <div class="javachild">
+            <span class="lessthan">&#x3c;&#47;&#62;</span> 
+            <p class="lesspro">Programs</p>
+            <div class="st"><i class="fa-solid fa-book-open " style="margin-left:3px"></i>Start learning</div>
+        </div>
+    </div>  
+
+    <div class="java"> 
+        <div class="pr">PROGRAMMING</div>
+        <div class="core">Data structure</div>
+        <hr style="margin-top:30px; opacity: 0.3;" >
+        <div class="javachild">
+            <span class="lessthan">&#x3c;&#47;&#62;</span> 
+            <p class="lesspro">Programs</p>
+            <div class="st"><i class="fa-solid fa-book-open " style="margin-left:3px"></i>Start learning</div>
+        </div>
+    </div>  
+
+    <div class="java"> 
+        <div class="pr">PROGRAMMING</div>
+        <div class="core">C Language</div>
+        <hr style="margin-top:30px; opacity: 0.3;" >
+        <div class="javachild">
+            <span class="lessthan">&#x3c;&#47;&#62;</span> 
+            <p class="lesspro">Programs</p>
+            <div class="st"><i class="fa-solid fa-book-open " style="margin-left:3px"></i>Start learning</div>
+        </div>
+    </div>  
+
+    <div class="java"> 
+        <div class="pr">PROGRAMMING</div>
+        <div class="core">Tally</div>
+        <hr style="margin-top:30px; opacity: 0.3;" >
+        <div class="javachild">
+            <span class="lessthan">&#x3c;&#47;&#62;</span> 
+            <p class="lesspro">Programs</p>
+            <div class="st"><i class="fa-solid fa-book-open " style="margin-left:3px"></i>Start learning</div>
+        </div>
+    </div>  
+
+    <div class="java"> 
+        <div class="pr">PROGRAMMING</div>
+        <div class="core">Android</div>
+        <hr style="margin-top:30px; opacity: 0.3;" >
+        <div class="javachild">
+            <span class="lessthan">&#x3c;&#47;&#62;</span> 
+            <p class="lesspro">Programs</p>
+            <div class="st"><i class="fa-solid fa-book-open " style="margin-left:3px"></i>Start learning</div>
+        </div>
+    </div>  
+
+    <div class="java"> 
+        <div class="pr">PROGRAMMING</div>
+        <div class="core">HTML</div>
+        <hr style="margin-top:30px; opacity: 0.3;" >
+        <div class="javachild">
+            <span class="lessthan">&#x3c;&#47;&#62;</span> 
+            <p class="lesspro">Programs</p>
+            <div class="st"><i class="fa-solid fa-book-open " style="margin-left:3px"></i>Start learning</div>
+        </div>
+    </div>  
+ </div>
+
+
+
+ <div class="footerwrapper">
+    <img src="site-footer-mape.png" width="100% " height="400px" style="background-color: var(#171717); position: relative; display: block;">
+    <div class="footer">
+        <div class="ban">
+            <h4 style="margin-bottom:20px;">Hyderabad</h4>
+            <p style="line-height:15px;">#502, Nagasuri Plaza (Bank Of India <br>
+                building),Behind Maithrivanam,<br>
+                Ameerpet, Hyderabad - 500038.
+            </p>
+            <div class="contact">
+                <div>  
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 98666 66699</span><br>
+    
+                    <i class="fa-solid fa-headphones"></i>
+                    <span>040 23 73 6669</span><br>
+    
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@vectorindia.org</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ban">
+            <h4 style="margin-bottom:20px;">Bangalore</h4>
+            <p style="line-height:15px; margin-bottom: 20px;">33/49, 27th Cross, 12th Main,<br>
+                Jayanagar 4th block, Bangalore <br>
+                560011.
+            </p>
+            <div class="contact">
+                <div>  
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 87624 56789</span><br>
+    
+                    <i class="fa-solid fa-headphones"></i>
+                    <span>080 26546474</span><br>
+    
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@vectorindia.org</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ban">
+            <h4 style="margin-bottom:20px;">Chennai</h4>
+            <p style="line-height:15px;">2nd floor, 179, 1st Main Road, Nehru<br>
+                Nagar, Lane Opp to Turyaa Hotel,<br>
+                Perungudi, Chennai - 600096.
+            </p>
+            <div class="contact">
+                <div>  
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 94442 22459</span><br>
+    
+                    <i class="fa-solid fa-headphones"></i>
+                    <span> 044 24543969</span><br>
+    
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@vectorindia.org</span>
+                </div>
+            </div>
+        </div>
+        <div class="ban">
+            <h4 style="margin-bottom:20px;">Company</h4>
+            <p style="line-height:30px; font-weight:bold;">About Vector India <br>
+                Careers<br>Testimonials<br>Gallery<br>FAQs<br> Policies<br>
+                BLog<br>Contacts Us<br> Site Map<br>
+            </p>
+    
+           
+        </div>
+     </div>
+
+
+
+ </div>
+
+
+
+
+</body>
+</html>
